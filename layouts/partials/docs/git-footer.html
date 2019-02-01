@@ -1,7 +1,7 @@
 <!-- 31/01/2019: display logo, site author, publish date, lastmod date -->
 {{if or .Site.Params.Author .GitInfo .Date}}
 <br>
-<hr>
+<hr class="hr-footer">
 <div class="align-center book-git-footer">
   <img src="{{ "svg/logo.svg" | absURL }}" />
   {{ if .Site.Params.Author}}

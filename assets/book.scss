@@ -133,6 +133,14 @@ ul.pagination {
   }
 }
 
+// pk: 01/02/2019
+.hr-footer {
+    border: 0;
+    height: 1px;
+    background: $gray-300;
+}
+// end
+
 .book-git-footer {
   display: flex;
   margin-top: $padding-16;
@@ -140,7 +148,7 @@ ul.pagination {
   align-items: baseline;
 
   img {
-    width: $font-size-14;
+    width: $font-size-16;
     vertical-align: bottom;
   }
 }
