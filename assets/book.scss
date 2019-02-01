@@ -145,10 +145,10 @@ ul.pagination {
   display: flex;
   margin-top: $padding-16;
   font-size: $font-size-14;
-  align-items: baseline;
+  align-items: center;
 
   img {
-    width: $font-size-14;
+    width: $font-size-16;
     vertical-align: bottom;
   }
 }
