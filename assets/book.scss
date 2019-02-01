@@ -145,7 +145,7 @@ ul.pagination {
   display: flex;
   margin-top: $padding-16;
   font-size: $font-size-14;
-  align-items: center;
+  // align-items: initial;
 
   img {
     width: $font-size-16;
