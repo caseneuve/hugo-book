@@ -2,6 +2,6 @@
 {{ $page := path.Base (.Get 0) }}
 {{ with .Site.GetPage $sec }}
 {{ with .GetPage $page }}
-<li><a href="{{ relref . $page }}">{{ .LinkTitle | safeHTML }}</a></li>
+<li><a href="{{ relref . $page }}">{{ .LinkTitle | markdownify }}</a></li>
 {{ end }}
 {{ end }}
