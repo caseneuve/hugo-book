@@ -28,3 +28,9 @@ hi-gr {
     background: #c1ffc1;
     letter-spacing: 3px;
 }
+
+// id for bottom links to previous/next entry
+#next-prev {
+    color: $gray-600;
+    font-size: small;
+}
