@@ -6,7 +6,8 @@
       <a href="{{ .Permalink }}">{{ .Title }}</a>
     </h2>
     <h5>
-      <strong>{{ .Date.Format "January 2, 2006" }}</strong>
+      <!-- 17/03/2019 use partial for date (supports predefined format for different languages than English ) -->
+      {{ partial "posts/date" . }}
     </h5>
     <p class="markdown">
       {{- .Summary -}}
