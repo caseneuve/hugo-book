@@ -47,6 +47,19 @@ a {
   &:visited {
     color: $color-visited-link;
   }
+
+  &:hover {
+      text-decoration: none;
+  }
+
+  mark {
+      text-decoration: underline dotted $gray-700;
+  }
+
+  &:hover mark {
+      text-decoration: none;
+      background: $gray-200;
+  }
 }
 
 img {
@@ -63,11 +76,14 @@ aside nav ul {
   }
 
   a {
-    display: block;
+      display: block;
+      transition-duration: 0.4s;
   }
 
   a:hover {
-    opacity: .5;
+      // opacity: .5;
+      background: $gray-200;
+      text-decoration: none;
   }
 
   ul {
@@ -91,7 +107,11 @@ ul.pagination {
 }
 
 .book-brand {
-  margin-top: 0;
+    margin-top: 0;
+
+    a:hover {
+        text-decoration: none;
+    }
 }
 
 .book-menu {
@@ -179,6 +199,14 @@ aside nav,
   transition: 0.2s ease-in-out;
   transition-property: transform, margin-left, opacity;
   will-change: transform, margin-left;
+
+  a:hover {
+      text-decoration: none;
+  }
+
+  a:hover mark {
+      text-decoration: underline dotted $gray-700;
+  }
 }
 
 @media screen and (max-width: $md-breakpoint) {
