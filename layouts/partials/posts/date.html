@@ -1,0 +1,14 @@
+<strong>
+  {{ $fullDate := default true .Site.Params.bookpostsfulldate }}
+  {{ if $fullDate }}
+  {{ if $.Site.Data.pl_months }}
+  <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+    {{ .Date.Day }} {{ index $.Site.Data.pl_months (printf "%d" .Date.Month) }} {{ .Date.Year }}
+  </time>
+  {{ else }}
+  {{ .Date.Format "2, January 2006" }}
+  {{end}}
+  {{ else }}
+  {{ .Date.Format "02/01/2006" }}
+  {{ end }}
+</strong>

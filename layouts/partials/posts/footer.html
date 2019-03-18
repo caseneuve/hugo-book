@@ -1,0 +1,9 @@
+{{if .Site.Params.Author }}
+<br>
+<hr class="hr-footer">
+<div class="align-center book-git-footer">
+  <img src="{{ "svg/logo.svg" | absURL }}" />
+  {{ if .Site.Params.Author}}
+    © {{.Site.Params.Author}}&nbsp;
+  {{end}}
+  {{end}}
