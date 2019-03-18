@@ -34,3 +34,17 @@ hi-gr {
     color: $gray-600;
     font-size: small;
 }
+
+// 19/03/2019: center image and caption
+figure img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: auto;
+}
+
+figcaption {
+    font-size: small;
+    text-align: center;
+}
