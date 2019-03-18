@@ -201,6 +201,7 @@ aside nav,
   will-change: transform, margin-left;
 
   a:hover {
+      background: $gray-200;
       text-decoration: none;
   }
 
