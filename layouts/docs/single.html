@@ -2,6 +2,12 @@
 <article class="markdown">
   {{- .Content -}}
 </article>
+<!-- 18/03/2019: show previous next section by default (turn off by setting BookShowContent param)  -->
+{{ $showContext := default (default true .Site.Params.BookShowContext) .Params.bookshowcontext }}
+{{ if $showContext }}
+{{ partial "prev_next" . }}
+{{ end }}
+
 {{ end }}
 
 {{ define "toc" }}

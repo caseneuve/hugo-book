@@ -8,5 +8,13 @@
 </header>
 <article class="markdown">
   {{- .Content -}}
+  <!-- 17/03/2019: show previous / next entry in posts' section by default (turn of by setting BookShowContext to false)  -->
+  {{ $showContext := default (default true .Site.Params.BookShowContext) .Params.bookshowcontext }}
+  {{ if $showContext }}
+  {{ partial "prev_next" . }}
+  {{ end }}
 </article>
+<!-- 17/03/2019: add footer  -->
+{{ partial "posts/footer" . }}
+
 {{ end }}
