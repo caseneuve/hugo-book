@@ -9,11 +9,17 @@
       <!-- 17/03/2019 use partial for date (supports predefined format for different languages than English ) -->
       {{ partial "posts/date" . }}
     </h5>
+    <!-- 17/03/2019 give priority to page description over summary -->
     <p class="markdown">
+      {{if .Description}}
+      {{ .Description }}
+      <a id="next-prev" href="{{ .Permalink }}"> → [więcej] </a>
+      {{else}}
       {{- .Summary -}}
       {{ if .Truncated }}
-        <a href="{{ .Permalink }}">...</a>
-      {{ end }}
+      <a id="next-prev" href="{{ .Permalink }}"> → [więcej] </a>
+      {{end}}
+      {{end}}
     </p>
   </article>
   {{ end }}
