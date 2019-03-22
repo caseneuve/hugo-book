@@ -1,6 +1,8 @@
 {{ $sec := path.Dir (.Get 0) }}
-{{ $page := path.Base (.Get 0) }}
+{{ $page := index (split (path.Split (.Get 0)) "|") 1 }}
 {{ with .Site.GetPage $sec }}
+<!-- if path was only a dir append index file to it -->
+{{ if eq $page "" }} {{ $page = "_index.md"}} {{ end }}
 {{ with .GetPage $page }}
 <li><a href="{{ relref . $page }}">{{ .LinkTitle | markdownify }}</a></li>
 {{ end }}
