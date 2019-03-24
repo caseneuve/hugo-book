@@ -2,6 +2,10 @@
 <article class="markdown">
   {{- .Content -}}
 </article>
+{{ $showContext := default (default true .Site.Params.BookShowContext) .Params.bookshowcontext }}
+{{ if $showContext }}
+{{ partial "prev_next" . }}
+{{ end }}
 {{ end }}
 
 {{ define "toc" }}
