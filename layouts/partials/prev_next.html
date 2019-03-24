@@ -1,7 +1,15 @@
-{{with .PrevInSection}}
-<div style="float: right"><a id="next-prev" href="{{.Permalink}}">{{.Title}} ❯ </a></div>
-{{end}}
+{{ $prev := .PrevInSection }}
+{{ if .Params.next }}{{ $prev = .GetPage .Params.next }}{{ end }}
+{{ with $prev }}
+<div style="float: right">
+  <a id="next-prev" href="{{.Permalink}}">{{.Title}} ❯ </a>
+</div>
+{{ end }}
 
-{{with .NextInSection}}
-<div style="float: left"><a id="next-prev" href="{{.Permalink}}"> ❮ {{.Title}} </a></div>
-{{end}}
+{{ $next := .NextInSection }}
+{{ if .Params.prev }}{{ $next = .GetPage .Params.prev }}{{ end }}
+{{ with $next }}
+<div style="float: left">
+    <a id="next-prev" href="{{.Permalink}}"> ❮ {{.Title}} </a>
+</div>
+{{ end }}
