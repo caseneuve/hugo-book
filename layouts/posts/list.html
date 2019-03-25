@@ -3,7 +3,7 @@
   {{ range sort .Paginator.Pages }}
   <article>
     <h2>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </h2>
     <h5>
       <!-- 17/03/2019 use partial for date (supports predefined format for different languages than English ) -->

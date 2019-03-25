@@ -79,6 +79,9 @@ disablePathToLower: true
 #  information on 'doc' type pages.
 enableGitInfo: true
 
+# (Warnings) Theme is intended for documentation use, there for it doesn't render taxonomy.
+# You can hide related warning with config below
+disableKinds: ["taxonomy", "taxonomyTerm"]
 
 params:
   # (Optional, default true) Show or hide table of contents globally
@@ -87,11 +90,18 @@ params:
 
   # (Optional, default none) Set leaf bundle to render as side menu
   # When not specified file structure and weights will be used
-  BookMenuBundle: /docs/menu
+  BookMenuBundle: /menu
 
   # (Optional, default docs) Specify section of content to render as menu
   # You can also set value to "*" to render all sections to menu
   BookSection: docs
+
+  # This value is duplicate of $link-color for making active link highlight in menu bundle mode
+  # BookMenuBundleActiveLinkColor: \#004ed0
+
+  # Include JS scripts in pages. Disabled by default.
+  # - Keep side menu on same scroll position during navigation
+  BookEnableJS: true
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
