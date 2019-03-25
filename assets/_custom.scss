@@ -48,3 +48,16 @@ figcaption {
     font-size: small;
     text-align: center;
 }
+
+// 25/03/2019 → allows to change table style
+#table2 {
+    tr th {
+        background: $gray-200;
+        border: 1px solid;
+        border-color: $gray-500 $gray-500 $gray-700;
+    }
+
+    tr td {
+        border: 1px solid $gray-400;
+    }
+}
