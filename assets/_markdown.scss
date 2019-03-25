@@ -49,12 +49,25 @@ $block-border-radius: 0.15rem;
     border-left: $padding-1*2 solid $gray-300;
     margin: 0;
     padding: $padding-1 $padding-16;
+    font-size: $font-size-15;
 
     :first-child { margin-top: 0; }
     :last-child { margin-bottom: 0; }
   }
 
-  table tr td {
-    padding: $padding-8;
+    table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size: $font-size-15;
+
+    tr th, tr td {
+      padding: $padding-8 $padding-16;
+      line-height: 1;
+      border: 1px solid $white;
+    }
+
+    tr:nth-child(2n) {
+      background: $white;
+    }
   }
 }
