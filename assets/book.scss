@@ -161,9 +161,12 @@ ul.pagination {
 }
 
 // pk: 24/02/2019
-
 .footnotes {
     font-size: small;
+    // pk 30/03/2019 (naprawia to co w custom)
+    ol {
+        list-style-type: decimal;
+    }
 }
 
 // end
