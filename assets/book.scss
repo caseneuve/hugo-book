@@ -167,6 +167,12 @@ ul.pagination {
     ol {
         list-style-type: decimal;
     }
+    // pk 06/04/2019 (hr tutaj tak samo jak w footerze)
+    hr {
+        border: 0;
+        height: 1px;
+        background: $gray-300;
+    }
 }
 
 // end
