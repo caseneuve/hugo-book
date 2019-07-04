@@ -12,7 +12,7 @@
   {{ end }}
 {{ end }}
 
-{{- define "hrefhack" -}}
+{{ define "hrefhack" }}
   {{ $attrEq := "$=" }}
   {{ $attrVal := .RelPermalink }}
   {{ if eq .RelPermalink "/" }}
@@ -25,17 +25,16 @@
       color: {{ default "#004ed0" .Site.Params.BookMenuBundleActiveLinkColor }};
   }
   </style>
-{{- end -}}
+{{ end }}
 
-{{- define "jsmenu" -}}
+{{ define "jsmenu" }}
 <script>
 (function() {
   var menu = document.querySelector('aside.book-menu nav')
   addEventListener('beforeunload', function(event) {
     localStorage.setItem('menu.scrollTop', menu.scrollTop)
   });
-
   menu.scrollTop = localStorage.getItem('menu.scrollTop')
 })()
 </script>
-{{- end -}}
+{{ end }}
